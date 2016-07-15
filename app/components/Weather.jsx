@@ -36,7 +36,7 @@ var Weather = React.createClass({
   /* Fired by Examples search */
   componentDidMount: function () {
     var location = this.props.location.query.location;
-	console.log('componentDidMount fired - location = ' + location + '!');
+	console.log('componentDidMount fired - location = ' + location + '!!');
 
     if (location && location.length > 0) {
       this.handleSearch(location);
