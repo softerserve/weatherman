@@ -33,16 +33,20 @@ var Weather = React.createClass({
       });
     });
   },
+  /* Fired by Examples search */
   componentDidMount: function () {
     var location = this.props.location.query.location;
+	console.log('componentDidMount fired - location = ' + location + '!');
 
     if (location && location.length > 0) {
       this.handleSearch(location);
       window.location.hash = '#/';
     }
   },
+  /* Fired by Nav search */
   componentWillReceiveProps: function (newProps) {
     var location = newProps.location.query.location;
+	console.log('componentWillReceiveProps fired - location = ' + location + '!');
 
     if (location && location.length > 0) {
       this.handleSearch(location);

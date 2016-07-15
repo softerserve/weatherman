@@ -4,12 +4,13 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   onSearch: function (e) {
       e.preventDefault();
-
+      /* Fired from nav bar search */
       var location = this.refs.search.value;
       var encodedLocation = encodeURIComponent(location);
+	  console.log('Navbar fired - location = ' + location + '!');
 
       if (location.length > 0) {
-        this.refs.search.value = '';
+	    this.refs.search.value = '';
         window.location.hash = '#/?location=' + encodedLocation;
       }
   },
